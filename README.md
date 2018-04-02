@@ -51,7 +51,6 @@ Gem works with ruby 1.9.3 but you need to use kaminari < 1.0.0 gem. Please add t
 * white/black list of tables
 * data-tables inside your app
 * ajax-ify Rails DB
-* delete records, truncate tables
 * visualize SQL schema (future)
 * CRUD for table records (future)
 

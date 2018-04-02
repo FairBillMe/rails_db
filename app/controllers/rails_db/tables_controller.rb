@@ -1,6 +1,6 @@
 module RailsDb
   class TablesController < RailsDb::ApplicationController
-    LOAD_TABLE_ACTIONS = [:show, :data, :csv, :truncate, :destroy, :edit, :update, :xlsx, :search, :new, :create]
+    LOAD_TABLE_ACTIONS = [:show, :data, :csv, :destroy, :edit, :update, :xlsx, :search, :new, :create]
 
     if Rails::VERSION::MAJOR >= 4
       before_action :find_table, only: LOAD_TABLE_ACTIONS
@@ -48,11 +48,6 @@ module RailsDb
       else
         raise 'RailsDb could not find Axlsx, please add it to your Gemfile: "gem \'axlsx_rails\'"'
       end
-    end
-
-    def truncate
-      @table.truncate
-      render :data
     end
 
     def destroy

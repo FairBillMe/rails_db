@@ -4,7 +4,6 @@ RailsDb::Engine.routes.draw do
   resources :tables, :only => [:index, :show] do
     get 'data'
     get 'csv'
-    get 'truncate'
     get 'destroy' # to handle opens in new window (GET)
     get 'edit'    # to handle opens in new window (GET)
     put 'update'  # to handle opens in new window (GET)
