@@ -13,10 +13,6 @@ module RailsDb
         'sqlite'
       end
 
-      def self.truncate(table_name)
-        execute("DELETE FROM #{table_name};")
-      end
-
     end
 
   end

@@ -35,10 +35,6 @@ module RailsDb
         'text/x-sql'
       end
 
-      def self.truncate(table_name)
-        execute("TRUNCATE TABLE #{table_name};")
-      end
-
       def self.delete(table_name, pk_name, pk_id)
         case pk_id
           when Fixnum, Bignum then

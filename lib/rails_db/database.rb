@@ -4,7 +4,6 @@ module RailsDb
 
     class << self
       delegate :count,       to: :adapter
-      delegate :truncate,    to: :adapter
       delegate :delete,      to: :adapter
       delegate :execute,     to: :adapter
       delegate :select,      to: :adapter
