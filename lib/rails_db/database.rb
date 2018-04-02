@@ -15,7 +15,7 @@ module RailsDb
     end
 
     def self.tables
-      connection.tables.sort - ['schema_migrations']
+      connection.tables.sort + connection.views.sort - ['schema_migrations']
     end
 
     def self.accessible_tables
